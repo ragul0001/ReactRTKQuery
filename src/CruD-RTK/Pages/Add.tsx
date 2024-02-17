@@ -8,7 +8,7 @@ function Add() {
     const navigate=useNavigate();
     const initalState={name:'',email:"",company:""};
    const[values,setValue]=useState(initalState)
-
+     const [lastId, setLastId] = useState(0); 
 
    const [getData]=useAddDataMutation();
    const handleChange=(e:any)=>{
@@ -23,7 +23,7 @@ function Add() {
         try {
            await getData(values); // Assuming addData is a function that sends a POST request to your API
            // Optionally, you can clear the form fields after successful submission
-           setValue({ name: '', email: '', company: '' });
+           setValue({name:'',email:"",company:""});
            navigate('/')
         } catch (error) {
            console.error('Error occurred while adding data:', error);

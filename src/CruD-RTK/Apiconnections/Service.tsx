@@ -14,15 +14,40 @@ export const apiConnect=createApi({
                provideTags:['Crud']
              }),   
           }),
+          contact:build.query({
+               query: (id:any) => ({
+                    url: `/users/${id}`, // Add pagination parameters
+                    method: 'get',
+                    provideTags:['Crud']
+                  }), 
+          }),
           addData:build.mutation({
             query: (user:any) => ({
               url:"/users",
               method:"POST",
-              body:user   
-        }),
-
+              body:user,           
+                }),
+               invalidatesTags:['Crud']            
            }),
+           deleteData:build.mutation({
+               query: (id:any) => ({
+                    url:`/users/${id}`,
+                    method:"DELETE",                      
+                }),
+               invalidatesTags:['Crud'] 
+          }),
+                  // Inside apiConnect definition
+          updateData:build.mutation({
+               query: ({ id, ...userData }) => ({
+               url: `/users/${id}`,
+               method: "PUT",
+               body: userData,
+               }),
+               invalidatesTags: ["Crud"],
+          }),    
      }),
+  
+   
 })
 
-export const {useGetDataQuery,useAddDataMutation}=apiConnect
+export const {useGetDataQuery,useContactQuery,useAddDataMutation,useDeleteDataMutation,useUpdateDataMutation}=apiConnect

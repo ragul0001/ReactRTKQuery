@@ -63,28 +63,22 @@
       "company": "techtist"
     },
     {
-      "id": "2",
-      "name": "Ganesh",
+      "name": "Ganesh R",
       "email": "ganesh@gmail.com",
-      "company": "Hexamware"
+      "company": "Hexamware",
+      "id": "2"
     },
     {
-      "id": "3",
       "name": "Poovarasan",
       "email": "poov@gmail.com",
+      "company": "Bosch",
+      "id": "3"
+    },
+    {
+      "id": "64d5",
+      "name": "Abinaya",
+      "email": "abinaya@gmail.com",
       "company": "Bosch"
-    },
-    {
-      "id": "2399",
-      "name": "Prittisha",
-      "email": "pritty@gmail.com",
-      "company": "KBR"
-    },
-    {
-      "id": "32a5",
-      "name": "Ragul",
-      "email": "ragulj2king@gmail.com",
-      "company": "Techtist"
     }
   ]
 }
